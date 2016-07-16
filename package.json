@@ -1,0 +1,22 @@
+{
+  "name": "petjs",
+  "version": "1.0.0",
+  "description": "API for a social network \u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[D\u001b[D\u001b[Dto create a social network for pets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xTeddyR/PetJS.git"
+  },
+  "author": "REINO Teddy FRUITET Robin BOEHM Jeremy KOKOGHLANIAN Vartan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xTeddyR/PetJS/issues"
+  },
+  "homepage": "https://github.com/xTeddyR/PetJS#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
