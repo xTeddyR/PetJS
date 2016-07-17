@@ -10,6 +10,7 @@ var port = process.env.PORT || DEFAULT_PORT;
 app.use(bodyParser.urlencoded({
     "extended": false
 }));
+app.use(express.static("./public"));
 
 require("./routes")(app);
 

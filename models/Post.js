@@ -1,4 +1,4 @@
-var sequelize = require("sequelize");
+var sequelize = require("./sequelize");
 
 module.exports = sequelize.import("post", function (sequelize, datatypes) {
     return sequelize.define("Post", {

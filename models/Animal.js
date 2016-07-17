@@ -1,4 +1,4 @@
-var sequelize = require("sequelize");
+var sequelize = require("./sequelize");
 
 module.exports = sequelize.import("animal", function (sequelize, datatypes) {
     return sequelize.define("Animal", {
@@ -29,5 +29,5 @@ module.exports = sequelize.import("animal", function (sequelize, datatypes) {
         paranoid: true,
         freezeTableName: true,
         underscored: true
-    })
-})
+    });
+});

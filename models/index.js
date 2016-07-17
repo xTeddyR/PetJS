@@ -1,10 +1,10 @@
-var sequelize = require("sequelize");
-var User = require("User.js");
-var Animal = require("Animal.js");
-var Category = require("Category.js");
-var Post = require("Post.js");
-var Comment = require("Comment.js");
-var Amis = require("Amis.js");
+var sequelize = require("./sequelize");
+var User = require("./User");
+var Animal = require("./Animal");
+var Category = require("./Category");
+var Post = require("./Post");
+var Comment = require("./Comment");
+var Amis = require("./Amis");
 
 sequelize.sync();
 
