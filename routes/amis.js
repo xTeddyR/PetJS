@@ -30,11 +30,16 @@ module.exports = function (app) {
         var Amis = models.Amis;
         var request = {
             "where": {
-                animal_id_animal_1: req.params.id,
-                animal_id_animal_2: req.params.id
+                $or: [
+                    {
+                        animal_id_animal_1: req.params.id
+                    }, {
+                        animal_id_animal_2: req.params.id
+                    }
+                ]
             }
         }
-        Amis.find(request).then(function (result) {
+        Amis.findAll(request).then(function (result) {
             res.json({
                 "code": 0,
                 "result": result

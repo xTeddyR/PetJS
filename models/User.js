@@ -8,7 +8,7 @@ module.exports = sequelize.import("user", function (sequelize, datatypes) {
             autoIncrement: true
         },
         email: {
-            types: datatypes.STRING
+            type: datatypes.STRING
         },
         password: {
             type: datatypes.STRING
@@ -20,7 +20,7 @@ module.exports = sequelize.import("user", function (sequelize, datatypes) {
             type: datatypes.STRING
         },
         description: {
-            type:datatypes.STRING
+            type: datatypes.STRING
         }
     }, {
         paranoid: true,
