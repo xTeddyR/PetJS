@@ -25,6 +25,8 @@ module.exports = sequelize.import("user", function (sequelize, datatypes) {
     }, {
         paranoid: true,
         freezeTableName: true,
-        underscored: true
+        underscored: true,
+        createdAt: "create_time",
+        updatedAt: "update_time"
     });
 });
