@@ -10,9 +10,6 @@ module.exports = sequelize.import("animal", function (sequelize, datatypes) {
         name: {
             type: datatypes.STRING
         },
-        type: {
-            type: datatypes.STRING
-        },
         birthday: {
             type: datatypes.DATEONLY
         },

@@ -2,11 +2,10 @@ var models = require("../models");
 
 module.exports = function (app) {
     app.post("/:iduser/addanimal", function (req, res, next) {
-        if(req.body.name && req.body.type && req.body.birthday && req.body.category){
+        if(req.body.name && req.body.birthday && req.body.category){
             var Animal = models.Animal;
             Animal.create({
                 "name": req.body.name,
-                "type": req.body.type,
                 "birthday": req.body.birthday,
                 "description": req.body.description,
                 "user_id_user": req.params.iduser,
