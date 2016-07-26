@@ -20,7 +20,6 @@ module.exports = function (app) {
                     "code": 2,
                     "message": "Sequelize Error"
                 });
-                console.log(err);
             });
         }else{
             res.json({
