@@ -3,7 +3,7 @@ var sequelize = require("./sequelize");
 module.exports = sequelize.import("animal", function (sequelize, datatypes) {
     return sequelize.define("Animal", {
         id_animal: {
-           type: datatypes.BIGINT,
+            type: datatypes.BIGINT,
             primaryKey: true,
             autoIncrement: true
         },
@@ -14,9 +14,9 @@ module.exports = sequelize.import("animal", function (sequelize, datatypes) {
             type: datatypes.STRING
         },
         birthday: {
-            type: datatypes.DATE
+            type: datatypes.DATEONLY
         },
-        descrption: {
+        description: {
             type: datatypes.STRING
         },
         user_id_user: {
@@ -28,6 +28,8 @@ module.exports = sequelize.import("animal", function (sequelize, datatypes) {
     }, {
         paranoid: true,
         freezeTableName: true,
-        underscored: true
+        underscored: true,
+        createdAt: "create_time",
+        updatedAt: "update_time"
     });
 });

@@ -1,12 +1,12 @@
 var models = require("../models");
 
 module.exports = function (app) {
-    app.post("/:id/:idamis", function (req, res, next) {
-        if (req.body.id && req.body.idamis) {
+    app.post("/:iduser/:idanimal/addamis", function (req, res, next) {
+        if (req.body.idpet) {
             var Amis = models.Amis;
             Amis.create({
-                "animal_id_animal_1": req.body.id,
-                "animal_id_animal_2": req.body.idamis
+                "animal_id_animal_1": req.body.idpet,
+                "animal_id_animal_2": req.params.idanimal
             }).then(function (result) {
                 res.json({
                     "code": 0,
@@ -26,15 +26,15 @@ module.exports = function (app) {
         }
     });
     
-    app.get("/:id/amis", function (req, res, next) {
+    app.get("/:iduser/:idanimal/amis", function (req, res, next) {
         var Amis = models.Amis;
         var request = {
             "where": {
                 $or: [
                     {
-                        animal_id_animal_1: req.params.id
+                        animal_id_animal_1: req.params.idanimal
                     }, {
-                        animal_id_animal_2: req.params.id
+                        animal_id_animal_2: req.params.idanimal
                     }
                 ]
             }
