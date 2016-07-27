@@ -15,6 +15,9 @@ module.exports = sequelize.import("comment", function (sequelize, datatypes) {
         },
         animal_id_animal: {
             type: datatypes.BIGINT
+        },
+        post_id_post: {
+            type: datatypes.BIGINT
         }
     }, {
         paranoid: true,
