@@ -19,6 +19,9 @@ module.exports = sequelize.import("post", function (sequelize, datatypes) {
     }, {
         paranoid: true,
         freezeTableName: true,
-        underscored: true
+        underscored: true,
+        createdAt: "create_time",
+        updatedAt: "update_time",
+        deletedAt: "delete_time"
     });
 });

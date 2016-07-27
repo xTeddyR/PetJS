@@ -27,6 +27,7 @@ module.exports = sequelize.import("animal", function (sequelize, datatypes) {
         freezeTableName: true,
         underscored: true,
         createdAt: "create_time",
-        updatedAt: "update_time"
+        updatedAt: "update_time",
+        deletedAt: "delete_time"
     });
 });
